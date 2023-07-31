@@ -54,7 +54,7 @@ void Menu()
 int InputStudent()  //输入学生信息	
 {
 	int d;
-	int i = 1;
+	int i = n+1;
 
 	while (i)
 	{
@@ -65,6 +65,8 @@ int InputStudent()  //输入学生信息
 
 		printf("学号: ");
 		scanf("%ld", &Stu[i].num);
+
+		
 
 		printf("姓名: ");
 		scanf("%s", Stu[i].name);
@@ -81,8 +83,10 @@ int InputStudent()  //输入学生信息
 		printf("计算机成绩: ");
 		scanf("%d", &Stu[i].computer);
 
-		i++;
-		n++;
+		
+				i++;
+				n++;
+		
 
 		printf("是否继续输入?(1.继续 2.退出)\n");
 		scanf("%d", &d);
@@ -450,6 +454,8 @@ void ClassGradeAnalysis()//班级成绩分析
 }
 
 
+
+
 //***********************主函数
 int main()
 {
@@ -460,7 +466,6 @@ int main()
 
 
 	case 1:  //添加学生信息
-
 		InputStudent(Stu, N);
 		break;
 	case 2:  //查学号
